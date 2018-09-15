@@ -1,0 +1,44 @@
+name: AutoFarm
+version: 1.2.0
+description: Automatic Farming!
+author: Bluerossman
+authors: [Bluerossman]
+softdepend: []
+main: tk.porthydra.autofarm.AutoFarm
+database: false
+
+commands:
+   autofarm:
+      description: 'The AutoFarm main command'
+      usage: 'Usage: /af <arguments>'
+      aliases: af
+
+permissions:
+    autofarm.reload:
+        description: Grants access to /af reload
+        default: op
+    autofarm.toggle:
+        description: Grants access to /af toggle
+        default: true
+    autofarm.mode:
+        description: Grants access to /af mode
+        default: true
+    autofarm.crop.wheat:
+        description: Allows the auto-farming of wheat
+        default: true
+    autofarm.crop.carrot:
+        description: Allows the auto-farming of carrots
+        default: true
+    autofarm.crop.potato:
+        description: Allows the auto-farming of potatoes
+        default: true
+    autofarm.crop.melon:
+        description: Allows the auto-farming of melons
+        default: true
+    autofarm.crop.pumpkin:
+        description: Allows the auto-farming of pumpkins
+        default: true
+    autofarm.crop.netherwart:
+        description: Allows the auto-farming of nether wart
+        default: true
+        

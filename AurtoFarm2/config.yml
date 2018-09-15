@@ -1,0 +1,56 @@
+# Configuration file for AutoFarm
+
+###################
+#                 #
+#     General     #
+#                 #
+###################
+
+defaultToggle: true
+# The default toggle for all auto-farming.
+# Resets on login to this.
+
+
+
+###################
+#                 #
+#   Auto-replant  #
+#                 #
+###################
+
+autoreplant:
+  enabled: true
+
+  item:
+    enabled: false
+    # Should players have to use an item to auto-replant?
+    material: DIAMOND_HOE
+    # Material of said item
+    durabilityLoss: 2
+    # The durability lost upon a successfull auto-farm
+
+  replantMessage: 
+  - '&6Automatically replanted!'
+  - '&6See &4/af &6for more info!' 
+  # Message(s) to display to players upon an auto-replant
+
+
+
+###################
+#                 #
+#    Auto-plant   #
+#                 #
+###################
+
+autoplant:
+  enabled: true
+
+  defaultMode: wheat
+  # The default mode for auto-planting.
+  # Resets on login to this.
+  # Possible values: wheat, carrot, potato, melon, pumpkin, netherwart
+
+  autoPlantMessage: 
+  - '&6Automatically planted!'
+  - '&6See &4/af &6for more info!'
+  # Message to display to players upon an auto-plant
