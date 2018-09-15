@@ -17,7 +17,7 @@ public class AutoFarm extends JavaPlugin {
 	
 	private HashMap<Player, Boolean> toggles = new HashMap<Player, Boolean>();
 	private HashMap<Player, Material> mode = new HashMap<Player, Material>();
-	private Config c = new Config(this);
+	private Config c = new Config(this); 
 	
 	
 	private Material[] seeds = {Material.SEEDS, Material.CARROT_ITEM, Material.POTATO_ITEM, Material.MELON_SEEDS, 
