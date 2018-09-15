@@ -1,8 +1,8 @@
 name: AutoFarm
-version: 1.2.0
+version: 1.2.1
 description: Automatic Farming!
 author: Bluerossman
-authors: [Bluerossman]
+authors: [Bluerossman, HiZe_]
 softdepend: []
 main: tk.porthydra.autofarm.AutoFarm
 database: false

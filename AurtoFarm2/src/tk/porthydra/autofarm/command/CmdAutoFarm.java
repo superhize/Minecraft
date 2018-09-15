@@ -37,7 +37,7 @@ public class CmdAutoFarm implements CommandExecutor {
 								HashMap<Player, Material> mode = plugin.getMode();
 								mode.put(p, plugin.getCrops()[i]);
 								plugin.setMode(mode);
-								p.sendMessage(ChatColor.GOLD + "Mode set to: " + ChatColor.DARK_RED + modes[i]);
+								p.sendMessage(ChatColor.translateAlternateColorCodes('&', c.getmodeChangeMessage().replace("%state%", modes[i])));
 								found = true;
 							}
 						}
@@ -48,7 +48,7 @@ public class CmdAutoFarm implements CommandExecutor {
 					else if (args[0].equalsIgnoreCase("toggle") && p.hasPermission("autofarm.toggle")) {
 						HashMap<Player, Boolean> toggles = plugin.getToggles();
 						toggles.put(p, !toggles.get(p));
-						p.sendMessage(ChatColor.GOLD + "Automatic farming mode: " + ChatColor.DARK_RED + toggles.get(p));
+						p.sendMessage(ChatColor.translateAlternateColorCodes('&', c.getdefaultToggleMessage().replace("%state%", String.valueOf(toggles.get(p))))); 
 					}
 					else if (args[0].equalsIgnoreCase("reload") && sender.hasPermission("autofarm.reload")) {
 						c.reload();
@@ -62,19 +62,23 @@ public class CmdAutoFarm implements CommandExecutor {
 					c.reload();
 					sender.sendMessage("Plugin reloaded!");
 			}
-			else sender.sendMessage("Unrecognised arguments! Some commands require you to be a player");
+			else sender.sendMessage("Arguments invalide, certaine commande requière d'être un joueur.");
 		}
 		return true;
 	}
 	
 	private void help(Player p) {
-		p.sendMessage(ChatColor.GOLD + "Unrecognised arguments! Valid sub-commands: ");
+		p.sendMessage(ChatColor.GOLD + "Arguments invalide! Essayez: ");
+		/*
+		 * Remove
+		 *
 		if (p.hasPermission("autofarm.toggle")) p.sendMessage(ChatColor.BLUE + "   /af toggle"
 				+ ChatColor.DARK_AQUA + " - toggle auto-farming on and off");
 		if (p.hasPermission("autofarm.mode")) p.sendMessage(ChatColor.BLUE + "   /af mode <wheat|carrot|potato|melon|pumpkin|netherwart|beetroot>"
 				+ ChatColor.DARK_AQUA + " - select auto-plant mode");
 		if (p.hasPermission("autofarm.reload")) p.sendMessage(ChatColor.BLUE + "   /af reload"
 				+ ChatColor.DARK_AQUA + " - reload the plugin's config");
+		*/
 	}
 
 }

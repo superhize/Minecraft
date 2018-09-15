@@ -85,12 +85,12 @@ public class HoeListener implements Listener {
 													b.setType(Material.SOIL);
 													// Changing blocks.
 												}
-												else p.sendMessage(ChatColor.DARK_RED + "You don't have the correct seed!");
+												else p.sendMessage(ChatColor.translateAlternateColorCodes('&', c.getmessageNoSeed()));
 											}
-											else p.sendMessage(ChatColor.DARK_RED + "You don't have the correct seed!");
+											else p.sendMessage(ChatColor.translateAlternateColorCodes('&', c.getmessageNoSeed()));
 										}
 									}
-									else p.sendMessage(ChatColor.DARK_RED + "No space!");
+									else p.sendMessage(ChatColor.translateAlternateColorCodes('&', c.getmessageNoSpace()));
 								}
 							}
 						}

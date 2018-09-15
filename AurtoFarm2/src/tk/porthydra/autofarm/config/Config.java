@@ -67,6 +67,26 @@ public class Config {
 		return colouredList;
 	}
 	
+	public String getdefaultToggleMessage() {
+		return plugin.getConfig().getString("defaultToggleMessage");
+	}
+	
+	public String getmodeChangeMessage() {
+		return plugin.getConfig().getString("modeChangeMessage");
+	}
+	
+	public boolean sendMessageOnLogin() {
+		return plugin.getConfig().getBoolean("sendMessageOnLogin");
+	}
+	
+	public String getmessageNoSpace() {
+		return plugin.getConfig().getString("messageNoSpace");
+	}
+	
+	public String getmessageNoSeed() {
+		return plugin.getConfig().getString("messageNoSeed");
+	}
+	
 	public boolean isAutoRePlant() {
 		return plugin.getConfig().getBoolean("autoreplant.enabled");
 	}

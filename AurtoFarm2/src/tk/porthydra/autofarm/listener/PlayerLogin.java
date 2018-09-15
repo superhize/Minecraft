@@ -27,11 +27,13 @@ public class PlayerLogin implements Listener {
 		HashMap<Player, Material> mode = plugin.getMode();
 		if (!toggles.containsKey(e.getPlayer())) {
 			toggles.put(e.getPlayer(), c.defaultToggle());
-			e.getPlayer().sendMessage(ChatColor.GOLD + "Automatic farming mode: " + ChatColor.DARK_RED + c.defaultToggle());
+			if(c.sendMessageOnLogin())
+				e.getPlayer().sendMessage(ChatColor.GOLD + "Automatic farming mode: " + ChatColor.DARK_RED + c.defaultToggle());
 		}
 		if (!mode.containsKey(e.getPlayer())) {
 			mode.put(e.getPlayer(), c.defaultMode());
-			e.getPlayer().sendMessage(ChatColor.GOLD + "Mode set to: " + ChatColor.DARK_RED + c.defaultMode().toString());
+			if(c.sendMessageOnLogin())
+				e.getPlayer().sendMessage(ChatColor.GOLD + "Mode set to: " + ChatColor.DARK_RED + c.defaultMode().toString());
 		}
 		plugin.setToggles(toggles);
 		plugin.setMode(mode);

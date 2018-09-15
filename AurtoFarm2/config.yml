@@ -6,9 +6,16 @@
 #                 #
 ###################
 
-defaultToggle: true
 # The default toggle for all auto-farming.
 # Resets on login to this.
+defaultToggle: true
+
+defaultToggleMessage: "&6Mode de farm automatique: &c%state%"
+modeChangeMessage: "&6Mode défini sur: &c%state%"
+
+sendMessageOnLogin: true
+messageNoSpace: "&4Vous n'avez pas assez de place !"
+messageNoSeed: "&4Vous n'avez pas la bonne graine !"
 
 
 
@@ -54,3 +61,11 @@ autoplant:
   - '&6Automatically planted!'
   - '&6See &4/af &6for more info!'
   # Message to display to players upon an auto-plant
+  
+
+###################
+#                 #
+#     MESSAGE     #
+#                 #
+###################
+
