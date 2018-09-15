@@ -28,10 +28,6 @@ public class AutoFarm extends JavaPlugin {
 	
 	private String[] modes = {"wheat", "carrot", "potato", "melon", "pumpkin", "netherwart", "beetroot"};
 	
-	//TODO: Durability loss on auto-plant (and insect)
-	//TODO: Sugar, cocoa, cactus
-	//TODO: leeks
-	
 	@Override
 	public void onEnable() {
 		
